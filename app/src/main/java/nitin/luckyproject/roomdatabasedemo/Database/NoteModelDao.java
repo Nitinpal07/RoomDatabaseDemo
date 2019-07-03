@@ -18,10 +18,10 @@ public interface NoteModelDao {
     LiveData<List<NoteModel>> getAllnotes();
 
 
-    NoteModel getNoteById(String noteId);
+    //NoteModel getNoteById(String noteId);
 
     @Insert(onConflict = REPLACE)
-    void indertnote(NoteModel notemodel);
+    void insertnote(NoteModel notemodel);
 
     @Delete
     void deletenote(NoteModel noteModel);

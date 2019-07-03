@@ -6,10 +6,11 @@ import androidx.room.Database;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
 
-@Database(entities = NoteModel.class,version = 1)
+@Database(entities = {NoteModel.class},version = 1)
 public abstract class NoteDatabase extends RoomDatabase {
 
     private static  NoteDatabase INSNTACE;
+    public abstract NoteModelDao noteItemAndNotesModel();
 
     public static NoteDatabase getDatabase(Context context){
         if(INSNTACE ==null)
@@ -24,5 +25,5 @@ public abstract class NoteDatabase extends RoomDatabase {
         INSNTACE=null;
     }
 
-    public abstract NoteModelDao noteItemAndNotesModel();
+
 }

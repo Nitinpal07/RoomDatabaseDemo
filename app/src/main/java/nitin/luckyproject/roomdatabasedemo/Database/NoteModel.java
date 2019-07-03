@@ -1,5 +1,7 @@
 package nitin.luckyproject.roomdatabasedemo.Database;
 
+
+import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
@@ -7,7 +9,9 @@ import androidx.room.PrimaryKey;
 public class NoteModel {
     @PrimaryKey(autoGenerate = true)
     public int id;
+    @ColumnInfo(name = "note_title")
     private String notetitle;
+    @ColumnInfo(name = "note_desc")
     private String noteDesc;
 
     public NoteModel(int id, String notetitle, String noteDesc) {
